@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class  Admin_DB extends database {
 
-    protected final String ADMIN_FILE = "./Database/AdminControl.csv";
+    private final String ADMIN_FILE = "./Database/AdminControl.csv";
     ArrayList<admin_struct> admin;
 
     // Data Structure for handling admin user_name and password

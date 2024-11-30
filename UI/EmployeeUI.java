@@ -127,10 +127,7 @@ public class EmployeeUI implements UserInterface {
     public int viewBillingReport(ArrayList<Billing_DB.billing_struct> fullDetails){
         new BillingInfoScreen(fullDetails);
 
-        int choice = 0;
-
-
-        return choice;
+        return 0;
     }
 
     @Override

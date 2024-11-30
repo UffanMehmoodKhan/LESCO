@@ -1,10 +1,9 @@
 package Database;
 import java.io.*;
-import java.lang.annotation.Native;
 import java.util.ArrayList;
 
 public class Employee_DB extends database{
-    protected final String EMPLOYEE_FILE = "./Database/EmployeesData.csv";
+    private final static String EMPLOYEE_FILE = "./Database/EmployeesData.csv";
     ArrayList<employee_struct> employees;
 
     public static class employee_struct{
@@ -23,7 +22,7 @@ public class Employee_DB extends database{
 
     public Employee_DB(){
         System.out.println("\nEmployee Database");
-        employees = new ArrayList<employee_struct>();
+        employees = new ArrayList<>();
         setEMPLOYEE_FILE(EMPLOYEE_FILE);
         readEMPLOYEE_FILE();
 

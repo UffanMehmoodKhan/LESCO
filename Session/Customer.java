@@ -8,7 +8,6 @@ import javax.swing.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Customer implements Session {
 
@@ -96,7 +95,7 @@ public class Customer implements Session {
         Tax_DB.tax_tariff_struct D_3 = database.tax.getTax_tariff().get(2);
         Tax_DB.tax_tariff_struct C_3 = database.tax.getTax_tariff().getLast();
 
-        for (Billing_DB.billing_struct bills : database.billing.getBillingInfo()) {
+        for (Billing_DB.billing_struct bills : Billing_DB.getBillingInfo()) {
             if (bills.ID.equals(ID)) {
                 bills.totalBillingAmount = (Integer.parseInt(bills.currentMeterReading) * bills.costOfElectricity) + bills.fixedCharges;
                 for (Customer_DB.customer_struct customer : database.customer.getCustomers()) {

@@ -32,7 +32,7 @@ public class Employee implements Session{
 
             // Add Customer
             if (choice == 1) {
-                ArrayList<Customer_DB.customer_struct> fullDetails = Database.Customer_DB.getCustomers();
+                ArrayList<Customer_DB.customer_struct> fullDetails = database.customer.customerInfo;
                 int result = userInterface.EmployeeInfoTerminal(fullDetails);
 
 //                if (employee_choice == 1) {
@@ -228,7 +228,7 @@ public class Employee implements Session{
 
         int bill_num = 0;
         if (choice == 1){
-            for (Billing_DB.billing_struct bill : database.billing.getBillingInfo()){
+            for (Billing_DB.billing_struct bill : Billing_DB.getBillingInfo()){
                 if (bill.BillPaidStatus.equals("Paid")){
                    bill_num++;
                 }
@@ -236,7 +236,7 @@ public class Employee implements Session{
             System.out.println("\nAmount of Paid Bills: " + bill_num);
         }
         if (choice == 2){
-            for (Billing_DB.billing_struct bill : database.billing.getBillingInfo()){
+            for (Billing_DB.billing_struct bill : Billing_DB.getBillingInfo()){
                 if (bill.BillPaidStatus.equals("Unpaid")){
                     bill_num++;
                 }

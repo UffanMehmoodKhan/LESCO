@@ -36,7 +36,7 @@ public class Tax_DB extends database{
         System.out.println("\n\nIn TAX Tariff DB");
         tax_tariff = new ArrayList<tax_tariff_struct>();
         setTAX_FILE(TAX_FILE);
-        readTAX_FILE();
+        //readTAX_FILE();
     }
 
     public void setTAX_FILE(String file) {

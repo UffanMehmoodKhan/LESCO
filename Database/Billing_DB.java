@@ -52,11 +52,11 @@ public class Billing_DB extends database{
         }
     }
 
-    Billing_DB(){
+    public Billing_DB(){
         System.out.println("\nIn Billing Info Database");
         BillingInfo = new ArrayList<billing_struct>();
         setBILLING_FILE(BILLING_FILE);
-        readBILLING_FILE();
+        //readBILLING_FILE();
 
     }
 

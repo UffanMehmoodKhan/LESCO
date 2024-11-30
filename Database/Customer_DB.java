@@ -3,8 +3,8 @@ import java.io.*;
 import java.util.*;
 
 public class Customer_DB extends database{
-    public static final String CUSTOMER_FILE = "./Database/CustomerInfo.csv";
-    public static ArrayList<customer_struct> customerInfo;
+    protected final String CUSTOMER_FILE = "./Database/CustomerInfo.csv";
+    public ArrayList<customer_struct> customerInfo;
 
     public static class customer_struct{
         public String ID;
@@ -43,7 +43,7 @@ public class Customer_DB extends database{
         System.out.println("\nThis is Customer Database");
         customerInfo = new ArrayList<customer_struct>();
         setCUSTOMER_FILE(CUSTOMER_FILE);
-        readCUSTOMER_FILE();
+        // readCUSTOMER_FILE();
 
     }
 
@@ -77,7 +77,7 @@ public class Customer_DB extends database{
         }
     }
 
-    public static ArrayList<customer_struct> getCustomers() {
+    public ArrayList<customer_struct> getCustomers() {
         return customerInfo;
     }
 

@@ -19,7 +19,7 @@ public class database {
     public void initializeDB(){
         System.out.println("Initializing Databases...\n");
 
-        admin = new Admin_DB();
+        //admin = new Admin_DB();
         employee = new Employee_DB();
         customer = new Customer_DB();
         billing = new Billing_DB();
@@ -29,7 +29,7 @@ public class database {
 
     public void deinitializeDB(){
         System.out.println("De-initializing Databases...\n");
-        admin.deinitializeDB();
+        //admin.deinitializeDB();
         employee.deinitializeDB();
         customer.deinitializeDB();
         billing.deinitializeDB();
